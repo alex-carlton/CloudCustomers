@@ -1,5 +1,4 @@
 ﻿using CloudCustomers.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CloudCustomers.Api.Controllers
@@ -16,7 +15,7 @@ namespace CloudCustomers.Api.Controllers
         }
 
         [HttpGet(Name = "GetUsers")]
-        public async Task<IActionResult> Get() 
+        public async Task<IActionResult> Get()
         {
             var users = await _usersService.GetAllUsers();
 

@@ -35,7 +35,7 @@ public class TestUsersController
     {
         // Arange
         var mockUserService = new Mock<IUsersService>();
-        
+
         mockUserService
             .Setup(service => service.GetAllUsers())
             .ReturnsAsync(new List<User>());
