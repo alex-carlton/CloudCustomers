@@ -29,33 +29,7 @@ namespace CloudCustomers.Services
 
             if (usersResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                return new List<User>()
-                { 
-                    new User()
-                    {
-                        Id = 0,
-                        Name = "Jack",
-                        Email = "jack@text.com",
-                        Address = new Address()
-                        {
-                            Street = "123 Main Street",
-                            City = "Greenville",
-                            ZipCode = "55555"
-                        }
-                    },
-                    new User()
-                    {
-                        Id = 1,
-                        Name = "Jill",
-                        Email = "jill@text.com",
-                        Address = new Address()
-                        {
-                            Street = "123 Main Street",
-                            City = "Greenville",
-                            ZipCode = "55555"
-                        }
-                    },
-                };
+                return new List<User>();
             }
 
             var users = await usersResponse.Content.ReadFromJsonAsync<List<User>>();
